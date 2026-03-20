@@ -60,6 +60,7 @@ namespace UnityMCP.Editor
 
                 // Auto-repaint to update status
                 Repaint();
+                UnityMCPConnection.Update();
             }
             catch (Exception e)
             {

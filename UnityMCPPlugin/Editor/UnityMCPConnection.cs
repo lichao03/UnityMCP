@@ -74,7 +74,7 @@ namespace UnityMCP.Editor
                 Debug.Log("[UnityMCP] Starting initial connection");
                 ConnectToServer();
             };
-            EditorApplication.update += Update;
+            //EditorApplication.update += Update;
         }
 
         private static void HandleLogMessage(string message, string stackTrace, LogType type)
@@ -196,7 +196,7 @@ namespace UnityMCP.Editor
         private static float reconnectTimer = 0f;
         private static readonly float reconnectInterval = 5f;
 
-        private static void Update()
+        public static void Update()
         {
             if (!isConnected && webSocket?.State != WebSocketState.Open)
             {
